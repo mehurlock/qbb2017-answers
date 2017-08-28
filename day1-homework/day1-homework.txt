@@ -1,0 +1,4 @@
+fastqc SRR072903.fastq
+hisat2 -p 8 -q -x BDGP6 -U /Users/cmdb/qbb2017-answers/day1-afternoon//SRR072903.fastq -S SRR072903_processed.sam
+samtools sort -@ 8 -o SRR072903_processed.bam SRR072903_processed.sam
+samtools index SRR072903_processed.bam
