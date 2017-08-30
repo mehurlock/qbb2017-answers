@@ -19,6 +19,6 @@ for lines_1 in g:
     for keys in my_dictionary:
         if keys in lines_1 and count<100:
             count += 1
-            print keys, my_dictionary[keys]
+            print my_dictionary[keys].rstrip("\r\n"), lines_1.rstrip("\r\n")
         else:
             continue
