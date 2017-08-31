@@ -34,20 +34,7 @@ for i in range(0, len(sequence)-k):
         for item in kmerdict[kmer]:
             final_list= [item[0],item[1], "",i, "",kmer]
             print ('\t'.join(map(str, final_list)))
-#for kmer, count in querydict.iteritems():
-    #print kmer, count     
-    
-#for kmer in kmerdict:
-#    if kmer in 
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-     
+       
