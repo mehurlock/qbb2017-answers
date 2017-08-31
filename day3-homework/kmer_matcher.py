@@ -23,7 +23,8 @@ for ident, sequence in fasta.FASTAReader(target):
         else:
             kmerdict[kmer].append((ident, i))
 
-print "Target Sequence Name Position Target Position Query Kmer"
+header= ["Target Name", "Target Start", "Query Start", "Kmer"]
+print ('\t'.join(map(str, header)))
 ident, sequence = fasta.FASTAReader(query).next()
 sequence=sequence.upper()
 for i in range(0, len(sequence)-k):
@@ -31,7 +32,8 @@ for i in range(0, len(sequence)-k):
     kmer=sequence[i:i+k]
     if kmer in kmerdict:
         for item in kmerdict[kmer]:
-            print item[0],item[1],i,kmer
+            final_list= [item[0],item[1], "",i, "",kmer]
+            print ('\t'.join(map(str, final_list)))
 #for kmer, count in querydict.iteritems():
     #print kmer, count     
     
