@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Usage ./day4-homework-basic.py <samples.csv> <ctab_dir>
+Usage ./day5-lunch-promoter.py <tab_file> <ctab_file> <output_file_name>
 
 -Plot timecourse of FBtr0331261 for females
 """
