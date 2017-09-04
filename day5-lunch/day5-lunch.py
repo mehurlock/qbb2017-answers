@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Usage ./day5-lunch.py <ctab> <output_name.bed>
+Usage ./day5-lunch.py <ctab> > <output_name.bed>
 """
 
 import sys
