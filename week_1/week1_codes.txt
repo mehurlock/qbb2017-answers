@@ -1,0 +1,13 @@
+wget http://taylorlab.org/cmdb-lab/week1_query.fa
+""" Did not work due to blast website issue:  blastn -remote -db nr -query week1_query.fa -outfmt 6 -out output.blast.txt -evalue 1e-4 -num_alignments 1000
+	wget http://bioinformagic.org/outgoing/blastn
+	./blastn -db nr -remote -query week1_query.fa -outfmt "6 sseqid sseq" -out output.blast.txt -evalue 1e-4 -num_alignments 1000"""
+wget http://taylorlab.org/cmdb-lab/data/week-1/blast_alignment.tsv 
+awk '{gsub("-","")}{print">"$1"\n"$2}' blast_alignment.tsv > 1000_homologues.fa
+brew install emboss
+brew install mafft
+transeq 1000_homologues.fa 1000_h_prot.fa
+mafft 1000_h_prot.fa > alignment_prot.fa
+./fasta_converter 1000_homologues.fa alignment_prot.fa 
+./target_dna_extractor alignment_nuc.out prot.out
+./dna_alignment_statistics alignment_nuc.out prot.out query_dna.out query_prot.out 
