@@ -1,0 +1,36 @@
+The best output results were those coming from SPAdes using long reads. The N50 comes to 99915 which is nearly the entire reference genome mapped by one contig. That's great coverage and indicates a thorough analysis. This was better than the velvet long reads output which proudces a significantly lower N50 of 19911. Despite these differences, both methods produce dot plots representing the fully mapped sequence to the genome indicated by a line that follows the y=x. Further analysis would be necessary to discern which method was more accurate at the dna base level. Both plots show a great improvement over the short reads data, which did not provide good coverage nor substantial contig length in comparison to the length of the reference genome. Furthermore, jsut over 40% of the contigs were not properly aligned to the reference genome. The nanopore data certainly imporoved this, but still left gaps within the alingment such that almost 25% of the reference genome was not properly matched by contigs. 
+
+Velvet short reads output:
+Max: 998
+Min: 61
+Mean: 186.8
+Number: 305
+N50: 248
+
+Velvet long reads output:
+Max: 33235
+Min: 61
+Mean: 9096.45
+Number: 11
+N50: 19911
+
+SPAdes short reads output:
+Max: 1409
+Min: 207
+Mean: 379.8
+Number: 123
+N50: 372
+
+SPAdes short reads with nanopore output:
+Max: 6731
+Min: 207
+Mean: 1096.33
+Number: 64
+N50: 2673
+
+SPAdes long reads output:
+Max: 99915
+Min: 111
+Mean: 50013.0
+Number: 2
+N50: 99915
