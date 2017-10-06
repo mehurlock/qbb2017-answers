@@ -1,0 +1,6 @@
+plink2 --vcf BYxRM_segs_saccer3.bam.simplified.vcf --pheno BYxRM_PhenoData_edited.txt --pca --allow-no-sex --allow-extra-chr --mind
+./pca_iterator.py plink.eigenvec pca_plot
+plink2 --vcf BYxRM_segs_saccer3.bam.simplified.vcf --pheno BYxRM_PhenoData.txt --mind --freq
+./histogram_maker_plink.py plink.frq histogram
+plink2 --vcf BYxRM_segs_saccer3.bam.simplified.vcf --all-pheno --pheno test.txt --allow-no-sex --linear --allow-extra-chr --out gwas_output
+for f in *.assoc.linear; do ./manhattan_maker.py $f; done
