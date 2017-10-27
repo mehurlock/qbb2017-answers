@@ -1,0 +1,13 @@
+bowtie2-build chr19.fa indexedchr19.fa
+bowtie2 -q -x indexedchr19.fa -U CTCF_ER4.fastq -S aligned_CTCT_ER4.sam
+bowtie2 -q -x indexedchr19.fa -U CTCF_G1E.fastq -S aligned_CTCF_G1E.sam
+bowtie2 -q -x indexedchr19.fa -U input_ER4.fastq -S aligned_input_ER4.sam
+bowtie2 -q -x indexedchr19.fa -U input_G1E.fastq -S aligned_input_G1E.sam
+macs2 callpeak -t aligned_CTCF_ER4.sam -c aligned_input_ER4.sam -n ER4-peaks
+macs2 callpeak -t aligned_CTCF_G1E.sam -c aligned_input_G1E.sam -n G1E_peaks
+bedtools intersect -a G1E_peaks_peaks.narrowPeak -b ER4-peaks_peaks.narrowPeak -v > lost.bed
+bedtools intersect -a ER4-peaks_peaks.narrowPeak -b G1E_peaks_peaks.narrowPeak -v > gained.bed
+bedtools getfasta -fi chr19.fa -bed G1E_peaks_peaks.narrowPeak > G1E.fa
+bedtools getfasta -fi chr19.fa -bed ER4-peaks_peaks.narrowPeak > ER4.fa
+cat G1E.fa ER4.fa > CTCF_motif.fa
+/usr/local/opt/meme/bin/meme-chip -db motif_databases/JASPAR/JASPAR_CORE_2016_vertebrates.meme -meme-maxw 20 ER4.fa
