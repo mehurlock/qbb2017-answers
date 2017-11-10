@@ -1,0 +1,13 @@
+Primer Fragment Interaction Table 
+Forward Primer 	 Reverse Primer 
+5C_938_XIC-3_FOR_0087	5C_938_XIC-3_REV_0088
+5C_938_XIC-3_FOR_0168	5C_938_XIC-3_REV_0088
+5C_938_XIC-3_FOR_0629	5C_938_XIC-3_REV_0040
+5C_938_XIC-3_FOR_0726	5C_938_XIC-3_REV_0021
+5C_938_XIC-3_FOR_0496	5C_938_XIC-3_REV_0021
+5C_938_XIC-3_FOR_0122	5C_938_XIC-3_REV_0088
+5C_938_XIC-3_FOR_0047	5C_938_XIC-3_REV_0040
+5C_938_XIC-3_FOR_0587	5C_938_XIC-3_REV_0088
+5C_938_XIC-3_FOR_1160	5C_938_XIC-3_REV_1468
+
+ *Note: It appears that the bed file containing the primers has some uncovered regions. This means 4 CTCF binding sites have no corresponding Hi-C reads. The primer interactions may be inaccurate.
