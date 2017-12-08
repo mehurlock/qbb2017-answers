@@ -1,0 +1,8 @@
+bin.1	46	Staphylococcus haemolyticus JCSC1435
+bin.2	186	Leuconostoc citreum KM20
+bin.3	35	Staphylococcus lugdunensis HKU09-01
+bin.4	2	Enterococcus faecalis V583
+bin.5	12	Cutibacterium avidum 44067
+bin.6	49	Staphylococcus epidermidis RP62A
+bin.7	50	Staphylococcus aureus subsp. aureus CN1
+bin.8	3	Anaerococcus prevotii DSM 20548

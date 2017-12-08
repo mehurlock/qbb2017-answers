@@ -1,0 +1,11 @@
+*Note that for part 1, a command line prompt was used to refine the KRAKEN files as opposed to a Python script: awk'{gsub(";","\t")}{print}' <KRAKEN_file> > output.txt
+
+1. Enterococcous faecalis is the most prominent seeming to take about ~62% of the plot. Towards the end of the week, this seems to shift to ~70% of the plot. Next highest is Staphylococcus aureus which is ~17% of the plot which drops to ~11%. The final prominent species initially is Cuitbacterium avidum, having a ~17% presence. This drops significantly to ~3% by the end. Another interesting observance is that Staphylococcus aureus is not present initially, but shows up at about ~12% of the population near the end.
+
+2. We can group the contigs based on data trends such as the number of reads for each, the nucleotide content/frequency or their GC content. 
+
+3. metaBat was not working, so we skipped this.
+
+4. We can estimate the taxonomy of a bin more quantitatively by comparing KRAKEN data across the contigs. Choosing the ones with the most hits will confirm taxonomy hits for regions where data is limited in the procedure we used.
+
+5. The trends appear to be in agreement with the read taxonomy distribution. Extra SRR datasets in the tab file were removed to match the data originally used for earlier steps.
